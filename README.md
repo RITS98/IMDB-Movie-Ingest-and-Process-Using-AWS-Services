@@ -23,7 +23,7 @@ The architecture consists of the following components:
 - **AWS EventBridge**: Used for event-driven architecture to trigger workflows.
 - **AWS SNS**: Used for notifications and alerts.
 
-
+![movie_aws](https://github.com/user-attachments/assets/be9f31df-afaa-4cf9-ae42-17eff76279bd)
 
 ## Data Flow
 1. Raw data is ingested into AWS S3.
