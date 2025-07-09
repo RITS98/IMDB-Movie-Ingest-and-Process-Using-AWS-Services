@@ -120,7 +120,7 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 - Use **“Serverless”** if you want AWS to manage compute automatically.
 
 
-### 5. Configure Cluster Details
+#### 5. Configure Cluster Details
 
 - **Cluster Identifier**: e.g., `redshift-cluster-ritayan`
 - **Database name**: e.g., `dev` (default)
@@ -128,7 +128,7 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 - **Master username**: e.g., `admin`
 - **Master password**: Strong password
 
-### 6. Choose Node Type and Cluster Size
+#### 6. Choose Node Type and Cluster Size
 
 - **Node Type**: e.g., `dc2.large`, `ra3.xlplus`
 - **Cluster Type**: 
@@ -139,7 +139,7 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 <img width="1282" alt="image" src="https://github.com/user-attachments/assets/82748d53-c1e8-4c06-9888-254eb2ec253a" />
 
-### 7. Set Network and Security
+#### 7. Set Network and Security
 
 - **VPC**: Select your Virtual Private Cloud
 - **Subnet Group**: Choose a Redshift subnet group
@@ -149,10 +149,27 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 <img width="1423" alt="image" src="https://github.com/user-attachments/assets/3ebb4bfd-ca93-47f1-a9f7-7246374847b0" />
 
 
-### 8. Review and Launch
+#### 8. Review and Launch
 - Review all configurations
 - Click **“Create cluster”**
 
+<img width="1568" alt="image" src="https://github.com/user-attachments/assets/350a2325-406d-4489-b46b-7fb7b09a6858" />
+
+
+### Create Glue Crawlers
+
+1. Create Data Connections
+
+    - For RedShift
+      - Click on Connection and cjoose JDBC
+      <img width="1307" alt="image" src="https://github.com/user-attachments/assets/4048d7b2-1091-419a-992d-cb6b4259db85" />
+      - Copy the Redshift JDBC URL
+      <img width="1572" alt="image" src="https://github.com/user-attachments/assets/8f4026f8-6e22-48a7-8d68-ff4c5d88aa26" />
+      - Enter the required details
+      - In the network, choose the redshift vpc
+      <img width="1069" alt="image" src="https://github.com/user-attachments/assets/49baaab1-a06e-44a0-b82b-9ca2b3381191" />
+      - 
+      
 
 
 
@@ -164,5 +181,35 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 <img width="1670" alt="image" src="https://github.com/user-attachments/assets/79f2b3ca-2a34-4c43-941b-a6cb6dda4343" />
 
-2. 
+2. Create Schema and table
+
+<img width="1178" alt="image" src="https://github.com/user-attachments/assets/836066e7-b14c-4357-8196-188cb0d11422" />
+
+```
+USE dev;
+
+CREATE SCHEMA movies; 
+
+CREATE TABLE movies.imdb_movies_rating (
+    Poster_Link VARCHAR(MAX),
+    Series_Title VARCHAR(MAX),
+    Released_Year VARCHAR(10),
+    Certificate VARCHAR(50),
+    Runtime VARCHAR(50),
+    Genre VARCHAR(200),
+    IMDB_Rating DECIMAL(10,2),
+    Overview VARCHAR(MAX),
+    Meta_score INT,
+    Director VARCHAR(200),
+    Star1 VARCHAR(200),
+    Star2 VARCHAR(200),
+    Star3 VARCHAR(200),
+    Star4 VARCHAR(200),
+    No_of_Votes INT,
+    Gross VARCHAR(20)
+);
+```
+
+3. 
+
 
