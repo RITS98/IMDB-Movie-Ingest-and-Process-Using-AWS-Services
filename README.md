@@ -102,5 +102,67 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 <img width="1094" alt="image" src="https://github.com/user-attachments/assets/6711ec9c-cff3-4ffc-b7dd-9f5c9f0a36be" />
 
+### Create Redshift DataWarehouse
 
+#### 1. Sign In to AWS Console
+- URL: https://console.aws.amazon.com/
+- Login with your AWS credentials.
+
+
+#### 2. Open Amazon Redshift Service
+- In the AWS Console, search for **Redshift** and open it.
+
+#### 3. Click “Create cluster”
+
+
+#### 4. Choose Cluster Creation Method
+- Select **“Provisioned”** for full control over nodes and resources.
+- Use **“Serverless”** if you want AWS to manage compute automatically.
+
+
+### 5. Configure Cluster Details
+
+- **Cluster Identifier**: e.g., `redshift-cluster-ritayan`
+- **Database name**: e.g., `dev` (default)
+- **Port**: `5439` (default)
+- **Master username**: e.g., `admin`
+- **Master password**: Strong password
+
+### 6. Choose Node Type and Cluster Size
+
+- **Node Type**: e.g., `dc2.large`, `ra3.xlplus`
+- **Cluster Type**: 
+  - `single-node` for development
+  - `multi-node` for production
+
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/a3461bfe-2758-4640-b27f-ae1181d6093a" />
+
+<img width="1282" alt="image" src="https://github.com/user-attachments/assets/82748d53-c1e8-4c06-9888-254eb2ec253a" />
+
+### 7. Set Network and Security
+
+- **VPC**: Select your Virtual Private Cloud
+- **Subnet Group**: Choose a Redshift subnet group
+- **VPC Security Group**: Ensure port 5439 is open to your IP
+- **Give Proper IAM roles**
+
+<img width="1423" alt="image" src="https://github.com/user-attachments/assets/3ebb4bfd-ca93-47f1-a9f7-7246374847b0" />
+
+
+### 8. Review and Launch
+- Review all configurations
+- Click **“Create cluster”**
+
+
+
+
+
+
+## Results
+
+1. Uploaded the data in the input folder of the S3 bucket
+
+<img width="1670" alt="image" src="https://github.com/user-attachments/assets/79f2b3ca-2a34-4c43-941b-a6cb6dda4343" />
+
+2. 
 
