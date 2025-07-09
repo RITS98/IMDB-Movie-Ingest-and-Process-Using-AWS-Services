@@ -55,4 +55,52 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 ## Setup Steps
 
+### Create AWS S3 Bucket
+
+1. **Sign in to AWS Console**
+
+   * Go to [https://console.aws.amazon.com/s3](https://console.aws.amazon.com/s3)
+   * Login with your AWS credentials.
+
+2. **Open the S3 Dashboard**
+
+   * From the AWS Management Console, search for and select **S3**.
+
+3. **Click on "Create bucket"**
+
+   * This opens the bucket creation form.
+
+4. **Enter a Unique Bucket Name**
+
+   * Bucket names must be globally unique across all AWS accounts.
+   * Use lowercase letters, numbers, and hyphens only.
+
+5. **Choose AWS Region**
+
+   * Select the region where you want your data stored (e.g., `us-east-1`, `ap-south-1`).
+
+6. **Configure Options (optional)**
+
+   * **Versioning**: Enable if you want to keep multiple versions of an object.
+   * **Tags**: Add metadata as key-value pairs.
+   * **Default encryption**: Optional—select server-side encryption if needed.
+
+7. **Set Bucket Permissions**
+
+   * By default, public access is blocked (recommended for security).
+   * You can adjust access settings later using **bucket policy** or **IAM roles**.
+
+8. **Review and Create**
+
+   * Review all your settings.
+   * Click **"Create bucket"** at the bottom.
+
+
+<img width="1269" alt="image" src="https://github.com/user-attachments/assets/d48f5a5d-47b6-487d-bef3-523b57264bd1" />
+
+<img width="1269" alt="image" src="https://github.com/user-attachments/assets/7443ffac-afda-433e-9509-c3a9c87f7257" />
+
+<img width="1094" alt="image" src="https://github.com/user-attachments/assets/6711ec9c-cff3-4ffc-b7dd-9f5c9f0a36be" />
+
+
 
