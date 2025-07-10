@@ -156,44 +156,7 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 <img width="1568" alt="image" src="https://github.com/user-attachments/assets/350a2325-406d-4489-b46b-7fb7b09a6858" />
 
-
-### Create Glue Crawlers
-
-1. Create a Glue Role
-
-<img width="1564" alt="image" src="https://github.com/user-attachments/assets/4646a230-1e10-423a-812f-af990472125f" />
-
-2. Create Data Connections
-
-    - For RedShift
-      - For Redshift, transformation of data leads to creation of intermediate files which needs to be stored in the S3. Thats why we need to create
-        a S3 endpoint which the redshift will have access too.
-        <img width="1443" alt="image" src="https://github.com/user-attachments/assets/284ddafa-48f0-4fd9-ba5c-4908a10a39aa" />
-        <img width="1043" alt="image" src="https://github.com/user-attachments/assets/a7eb5c2d-af7c-4951-9ce1-088f403e6674" />
-
-      - Click on Connection and choose JDBC
-      <img width="1307" alt="image" src="https://github.com/user-attachments/assets/4048d7b2-1091-419a-992d-cb6b4259db85" />
-      - Copy the Redshift JDBC URL
-      <img width="1572" alt="image" src="https://github.com/user-attachments/assets/8f4026f8-6e22-48a7-8d68-ff4c5d88aa26" />
-      - Enter the required details
-      - In the network, choose the redshift vpc
-      <img width="1069" alt="image" src="https://github.com/user-attachments/assets/49baaab1-a06e-44a0-b82b-9ca2b3381191" />
-      - Review and Create
-      <img width="1689" alt="image" src="https://github.com/user-attachments/assets/470d003b-858d-4650-863a-8a3019429736" />
-
-      
-
-
-
-
-
-## Results
-
-1. Uploaded the data in the input folder of the S3 bucket
-
-<img width="1670" alt="image" src="https://github.com/user-attachments/assets/79f2b3ca-2a34-4c43-941b-a6cb6dda4343" />
-
-2. Create Schema and table
+#### 9. Create Schema and table
 
 <img width="1178" alt="image" src="https://github.com/user-attachments/assets/836066e7-b14c-4357-8196-188cb0d11422" />
 
@@ -222,6 +185,52 @@ CREATE TABLE movies.imdb_movies_rating (
 );
 ```
 
+
+
+### Create Glue Crawlers
+
+1. Create a Glue Role
+
+<img width="1606" alt="image" src="https://github.com/user-attachments/assets/7520044d-0970-45e6-a7a4-ff0207306cdb" />
+
+2. Create Data Connections
+
+    - For RedShift
+      - For Redshift, transformation of data leads to creation of intermediate files which needs to be stored in the S3. Thats why we need to create
+        a S3 endpoint which the redshift will have access too.
+        <img width="1443" alt="image" src="https://github.com/user-attachments/assets/284ddafa-48f0-4fd9-ba5c-4908a10a39aa" />
+        <img width="1043" alt="image" src="https://github.com/user-attachments/assets/a7eb5c2d-af7c-4951-9ce1-088f403e6674" />
+
+      - Click on Connection and choose JDBC
+      <img width="1307" alt="image" src="https://github.com/user-attachments/assets/4048d7b2-1091-419a-992d-cb6b4259db85" />
+      - Copy the Redshift JDBC URL
+      <img width="1572" alt="image" src="https://github.com/user-attachments/assets/8f4026f8-6e22-48a7-8d68-ff4c5d88aa26" />
+      - Enter the required details
+      - In the network, choose the redshift vpc
+      <img width="1069" alt="image" src="https://github.com/user-attachments/assets/49baaab1-a06e-44a0-b82b-9ca2b3381191" />
+      - Review and Create
+      <img width="1689" alt="image" src="https://github.com/user-attachments/assets/470d003b-858d-4650-863a-8a3019429736" />
+
+3. Test Connections and choose the `glue-role` option
+
+<img width="1410" alt="image" src="https://github.com/user-attachments/assets/680179bd-307b-4a62-ac71-ace84ee8b4c7" />
+
+<img width="1108" alt="image" src="https://github.com/user-attachments/assets/981091f9-ce1f-4dc9-b2f2-3ee98501c285" />
+
+<img width="1057" alt="image" src="https://github.com/user-attachments/assets/71a5993c-7e09-49e4-9cc9-8049d43ad606" />
+
+
+
+
+
+
+## Results
+
+1. Uploaded the data in the input folder of the S3 bucket
+
+<img width="1670" alt="image" src="https://github.com/user-attachments/assets/79f2b3ca-2a34-4c43-941b-a6cb6dda4343" />
+
+2. 
 3. 
 
 
