@@ -147,6 +147,7 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 - **Give Proper IAM roles**
 
 <img width="1423" alt="image" src="https://github.com/user-attachments/assets/3ebb4bfd-ca93-47f1-a9f7-7246374847b0" />
+<img width="1345" alt="image" src="https://github.com/user-attachments/assets/873ac542-8456-45a3-8ed0-8ff9b0ce9364" />
 
 
 #### 8. Review and Launch
@@ -158,17 +159,23 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 
 ### Create Glue Crawlers
 
-1. Create Data Connections
+1. Create a Glue Role
+
+<img width="1564" alt="image" src="https://github.com/user-attachments/assets/4646a230-1e10-423a-812f-af990472125f" />
+
+2. Create Data Connections
 
     - For RedShift
-      - Click on Connection and cjoose JDBC
+      - Click on Connection and choose JDBC
       <img width="1307" alt="image" src="https://github.com/user-attachments/assets/4048d7b2-1091-419a-992d-cb6b4259db85" />
       - Copy the Redshift JDBC URL
       <img width="1572" alt="image" src="https://github.com/user-attachments/assets/8f4026f8-6e22-48a7-8d68-ff4c5d88aa26" />
       - Enter the required details
       - In the network, choose the redshift vpc
       <img width="1069" alt="image" src="https://github.com/user-attachments/assets/49baaab1-a06e-44a0-b82b-9ca2b3381191" />
-      - 
+      - Review and Create
+      <img width="1689" alt="image" src="https://github.com/user-attachments/assets/470d003b-858d-4650-863a-8a3019429736" />
+
       
 
 
