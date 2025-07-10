@@ -219,6 +219,27 @@ CREATE TABLE movies.imdb_movies_rating (
 
 <img width="1057" alt="image" src="https://github.com/user-attachments/assets/71a5993c-7e09-49e4-9cc9-8049d43ad606" />
 
+4. Create Glue Databases
+   This acts as a catelog for the files in the S3 as well as for the tables in Redshift.
+   <img width="1706" alt="image" src="https://github.com/user-attachments/assets/0a1078a0-b826-4657-8ea1-2f5b655114bf" />
+
+6. Create 2 crawler. One to crawl the S3 bucket and the other to crawl the redshift datawarehouse table.
+
+   Crawler - 1
+   <img width="1675" alt="image" src="https://github.com/user-attachments/assets/05d455a7-6d39-4130-919a-05fc3316ac21" />
+
+   Crawler - 2
+   <img width="1678" alt="image" src="https://github.com/user-attachments/assets/541233ed-bbdc-4ba3-8c03-bee860cbb8ab" />
+7. Run the crawlers.
+
+<img width="1392" alt="image" src="https://github.com/user-attachments/assets/f2b37aad-1e92-4466-8069-a465a68be671" />
+
+![image](https://github.com/user-attachments/assets/686d48c9-82f0-478d-ba5d-cd46344c4026)
+![image](https://github.com/user-attachments/assets/b472905d-fcd5-4968-9bf5-741bd28c89f8)
+
+
+
+8. 
 
 
 
