@@ -166,6 +166,11 @@ The dataset used in this project is a collection of IMDB movie data, which inclu
 2. Create Data Connections
 
     - For RedShift
+      - For Redshift, transformation of data leads to creation of intermediate files which needs to be stored in the S3. Thats why we need to create
+        a S3 endpoint which the redshift will have access too.
+        <img width="1443" alt="image" src="https://github.com/user-attachments/assets/284ddafa-48f0-4fd9-ba5c-4908a10a39aa" />
+        <img width="1043" alt="image" src="https://github.com/user-attachments/assets/a7eb5c2d-af7c-4951-9ce1-088f403e6674" />
+
       - Click on Connection and choose JDBC
       <img width="1307" alt="image" src="https://github.com/user-attachments/assets/4048d7b2-1091-419a-992d-cb6b4259db85" />
       - Copy the Redshift JDBC URL
