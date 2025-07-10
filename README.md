@@ -238,8 +238,64 @@ CREATE TABLE movies.imdb_movies_rating (
 ![image](https://github.com/user-attachments/assets/b472905d-fcd5-4968-9bf5-741bd28c89f8)
 
 
+### Create Visual ETL
+1. Click on the Visual ETL option
+<img width="1273" alt="image" src="https://github.com/user-attachments/assets/56357b8b-a8e8-42e8-a60c-cb7f49249968" />
 
-8. 
+2. Create Source connection
+<img width="1565" alt="image" src="https://github.com/user-attachments/assets/c3750472-721d-4fb0-885c-f2e4d6a18572" />
+<img width="1536" alt="image" src="https://github.com/user-attachments/assets/df85feec-588c-424e-bdac-ad6e4e602169" />
+
+3. Transformation of Data
+  - Evaluate Data Quality
+    <img width="1669" alt="image" src="https://github.com/user-attachments/assets/9f1e1fd7-932d-44f4-a372-7c9ac672dd10" />
+  - Enable Cloudwatch notification
+    <img width="1671" alt="image" src="https://github.com/user-attachments/assets/6c99b9f8-743d-458f-97f5-db368b646929" />
+  - Enable this for further transformation
+    ![image](https://github.com/user-attachments/assets/ace2addd-0166-4855-998a-1a7afc5ed029)
+    <img width="1089" alt="image" src="https://github.com/user-attachments/assets/3e258fe7-c47a-4018-a415-f0efd3b6f4ab" />
+
+  - Move Rules Outcome results to S3 bucket
+    <img width="1542" alt="image" src="https://github.com/user-attachments/assets/8cd9f98c-6c5d-4a3e-8c08-98571b759479" />
+
+  - Add a conditional Router to filter bad records
+    <img width="1647" alt="image" src="https://github.com/user-attachments/assets/309fc915-0ba8-40ff-bd92-e4cddcc222e6" />
+  - Move bad records to S3 bucket for reevalution later
+    <img width="1653" alt="image" src="https://github.com/user-attachments/assets/926a0cd3-806b-4128-83b5-0e0555e31269" />
+  - In the good records path, drop the redundant columns to match the columns of Redshift tables
+    <img width="1650" alt="image" src="https://github.com/user-attachments/assets/6f68701e-efda-457e-accf-a2418fcd1edc" />
+  - Write the transformed data
+    <img width="1667" alt="image" src="https://github.com/user-attachments/assets/6f76f461-4865-4264-b8a7-ba921c69cbd9" />
+  - Save the Visual ETL
+
+
+### Create SNS Topic For Sending Email
+1. Create a topic
+
+<img width="1172" alt="image" src="https://github.com/user-attachments/assets/7deb08f1-482b-459a-a004-68bd2f706f1a" />
+
+2. Create a subscription
+<img width="1403" alt="image" src="https://github.com/user-attachments/assets/0dc6c74d-de2c-488d-95f5-6fab7de465a7" />
+<img width="1074" alt="image" src="https://github.com/user-attachments/assets/5cbbb8bb-c016-4393-9bd3-9f601838bfb5" />
+<img width="657" alt="image" src="https://github.com/user-attachments/assets/bff37567-0dd2-4fce-8872-79f2c9ca84b6" />
+<img width="1300" alt="image" src="https://github.com/user-attachments/assets/78e3a7d5-6781-41dd-84be-7fa2922a0e7e" />
+
+3. Test the subscription by sending a message
+<img width="981" alt="image" src="https://github.com/user-attachments/assets/4626f708-fef8-49a9-b35b-00d953b49285" />
+
+
+### Create EventBridge to sent notification
+1. Create Rule
+<img width="1693" alt="image" src="https://github.com/user-attachments/assets/aa081eb9-e6c5-4a67-b173-f6d05c782dba" />
+
+2. Describe the Rule
+<img width="1727" alt="image" src="https://github.com/user-attachments/assets/683b6d7e-f419-484f-a4cb-bb154d76a28e" />
+<img width="1673" alt="image" src="https://github.com/user-attachments/assets/47c10a6e-0fd7-47d5-bdeb-5f4d3fbc3c5e" />
+
+3. Select the target which is SNS topic
+<img width="1681" alt="image" src="https://github.com/user-attachments/assets/55039d9e-b2b0-4594-a9e3-d4f219eb5d14" />
+
+4. Click on `Create rule`
 
 
 
