@@ -297,8 +297,20 @@ CREATE TABLE movies.imdb_movies_rating (
 
 4. Click on `Create rule`
 
+### Last Step - Create Two endpoints
 
+Thiss endpoints give necessary access to different aws serivces
 
+1. Cloudwatch Monitoriing Endpoint
+<img width="1399" alt="image" src="https://github.com/user-attachments/assets/c2ced2b4-2803-4fbc-aee7-2a92c8fd7073" />
+
+2. Glue Endpoint
+<img width="1441" alt="image" src="https://github.com/user-attachments/assets/01eb929a-3e1b-42b6-843b-fb18498d0406" />
+
+These are all the endpoints required
+<img width="1303" alt="image" src="https://github.com/user-attachments/assets/3be11cdb-0121-444b-9173-df807738a17d" />
+
+Now run the Visual ETL job.
 
 
 ## Results
@@ -307,7 +319,17 @@ CREATE TABLE movies.imdb_movies_rating (
 
 <img width="1670" alt="image" src="https://github.com/user-attachments/assets/79f2b3ca-2a34-4c43-941b-a6cb6dda4343" />
 
-2. 
-3. 
+2. Go to the Visual ETL and run the job.
+
+
+4. Failed Records Notification
+<img width="1282" alt="image" src="https://github.com/user-attachments/assets/1c73e158-fdac-419f-99a9-5bc290ca8110" />
+
+5. Jobs Succeeded
+<img width="1062" alt="image" src="https://github.com/user-attachments/assets/d4c0ef5d-60f0-40cd-adaf-0e4e7b552421" />
+
+6. Check the Redshift tables
+<img width="872" alt="image" src="https://github.com/user-attachments/assets/bf6ed135-ba8d-4a7c-a653-77c40770c0dc" />
+
 
 
